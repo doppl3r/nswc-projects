@@ -117,7 +117,8 @@ nav {
       nav.white ul a li {
         border-right-color: #494949; }
     nav.white ul > li > ul > li > a {
-      background-color: #fff; }
+      background-color: #fff;
+      text-align: left; }
       nav.white ul > li > ul > li > a:hover {
         background-color: #ededed; }
 
