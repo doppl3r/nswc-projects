@@ -177,6 +177,7 @@ nav {
 section { background-color: #fff; padding: 48px 0; background: url('.') no-repeat bottom center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 section .white { color: #ffffff; }
 section .white-background { background-color: #fff; }
+section.light-gray-background { background-color: #f7f7f7; }
 section.no-bottom-padding { padding-bottom: 0; }
 section .no-bottom-padding { padding-bottom: 0; }
 section.bottom-line { border-bottom: 1px solid #ededed; }
@@ -331,6 +332,44 @@ section {
     .vertical-align > [class*=" col-"] > div {
         flex: 1;
         flex-grow: 1;
+    }
+}
+
+article {
+    background-color: #ffffff;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.15);
+    margin: 0 0 5%;
+    padding: 24px;
+
+    img { padding: 0; margin-bottom: 5%; }
+
+    .title {
+        display: inline-block;
+        background-color: #29b4cd;
+        margin: 0 -10% 5%;
+        padding: 12px 5% 0px;
+
+        h3 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        p { 
+            color: #ffffff;
+            font-size: 14px;
+        }
+    }
+    .separator { border-bottom: 1px solid #cccccc; margin-bottom: 5%; }
+    .table {
+        margin: 5% 0;
+
+        td, th { 
+            text-align: center;
+            vertical-align: middle !important; 
+            font-size: 12px; 
+            padding: 2px 0 !important;
+        }
     }
 }
 
