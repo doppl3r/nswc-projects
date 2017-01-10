@@ -1,6 +1,8 @@
+//global variables
+$color: #6fcde4;
 
 html { background-color: #fff; }
-body { background-color: #fff;/*font-family: 'roboto-condensedbold';*/ overflow-x: hidden; font-size: 16px; }
+body { background-color: #fff; overflow-x: hidden; font-size: 16px; }
 body.bg { background: url('.') no-repeat bottom center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 body.gray { background-color: #e8e8e8; }
 a, a:hover { text-decoration: none; }
@@ -12,14 +14,16 @@ nav {
     margin: 0 auto;
     max-height: 96px;
     position: fixed;
+    text-align: center;
     top: 0;
     width: 100%;
     z-index: 2;
 
     .wrapper { pointer-events: none; }
+    .logo-link { display: none; }
     .logo {
         display: inline-block;
-        background-color: rgba(255,255,255,0.8);
+        // background-color: rgba(255,255,255,0.8);
         padding: 24px 16px;
         pointer-events: auto;
 
@@ -28,7 +32,7 @@ nav {
             max-height: 100%;
         }
 
-        .large { display: initial; }
+        .large { display: none; }
         .small { display: none; }
     }
     ul {
@@ -36,7 +40,7 @@ nav {
         padding: 0;
         margin: 0;
         vertical-align: top;
-        float: right;
+        // float: right;
         pointer-events: auto;
 
         & > li { /*Top Nav Items*/
@@ -59,14 +63,14 @@ nav {
                 }
 
                 &:hover {
-                    color: #84a229;
+                    color: $color;
                 }
             }
 
             & > ul { /*2nd level nav items*/
                 display: none;
                 background-color: rgba(255,255,255,0.8);
-                border-top: 3px solid #9dbd39;
+                border-top: 3px solid $color;
 
                 & > li {
                     display: block;
@@ -94,7 +98,7 @@ nav {
             }
             &.active {
                 & > a {
-                    color: #84a229;
+                    color: $color;
                 }
             }
         }
@@ -104,13 +108,14 @@ nav {
     &.white {
         background-color: #fff;
 
+        .logo-link { display: initial; }
         .logo {
             padding: 0px;
 
             .large { display: none; }
             .small {
                 display: initial;
-                padding: 30px 0 30px 12px;
+                padding: 18px 0;
                 background-color: transparent;
             }
         }
@@ -118,7 +123,7 @@ nav {
             a {
                 color: #494949;
 
-                &:hover { color: #84a229; }
+                &:hover { color: $color; }
                 li { border-right-color: #494949; }
             }
             & > li {
@@ -147,7 +152,7 @@ nav {
 .header1 .vide { text-align: center; position: relative; background: url('.') no-repeat bottom center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; }
 .header1 .vide h1 { font-family: 'nesobrite'; font-size: 72px; line-height: 72px; text-transform: uppercase; color: #fff; margin: 0; padding: 0; }
 .header1 .vide h6 { margin: 0 0 32px; font-size: 21px; color: #fff; font-family: 'roboto-condensedregular'; font-weight: normal; }
-.header1 .vide h6.green { color: #9ebc42;  }
+.header1 .vide h6.green { color: $color;  }
 .header1 .vide h6 strong { text-transform: uppercase; }
 .header1 .vide .button { position: absolute; color: #fff; font-family: 'roboto-condensedlight'; font-size: 15px; text-align: center; left:0; right:0; bottom: 0; }
 .header1 .vide .button span { display: block; text-transform: uppercase; }
@@ -179,17 +184,17 @@ section h3 { font-family: 'roboto-condensedregular'; font-size: 28px; padding: 0
 section h4 { font-family: 'roboto-condensedregular'; font-size: 21px; padding: 0px 0px 12px; margin-top: 0px; line-height: 21px; color: #494949; font-weight: normal; }
 section p { font-family: 'roboto-condensedlight'; font-size: 18px; color: #4a4a4a; margin-bottom: 5%; }
 section ul { font-family: 'roboto-condensedlight'; font-size: 18px; color: #4a4a4a; }
-section ul li a { font-size: inherit; font-family: inherit; color: #9ebc42; }
+section ul li a { font-size: inherit; font-family: inherit; color: $color; }
 section p strong { font-size: 21px; }
 section a { font-family: 'roboto-condensedbold';  font-size: 21px; color: #4a4a4a; margin-bottom: 5%; }
-section a:hover { color: #9ebc42;  }
+section a:hover { color: $color;  }
 section img { max-width: 100%; padding-bottom: 5%; }
 section img.block { display: block; margin-left:auto; margin-right:auto; }
 section .wrapper.pad-side { padding: 0px 12px; }
 section .button { display: inline-block; padding: 12px 24px; margin-bottom: 5%; color: #333; font-family: 'roboto-condensedbold'; font-size: 18px;  }
 section .button:hover { opacity: 0.75; }
 section .button.gray { background-color: #474747; color: #fff; }
-section .button.gray:hover { opacity: initial; background-color: #9ebc42; }
+section .button.gray:hover { opacity: initial; background-color: $color; }
 section .button.no-margin { margin: 0; }
 section .center { text-align: center; }
 section .no-margin { margin: initial; }
@@ -199,7 +204,7 @@ section .top-margin { margin-top: 64px; }
 section ul.left-nav { list-style: none; padding: 0 10% 0 0; font-size: 21px; font-family: 'roboto-condensedbold'; color: #494949; }
 section ul.left-nav a { display: block; text-decoration: none; margin: 0; padding: 8px 0; border-bottom: 1px solid #999999; }
 section ul.left-nav a:last-of-type { border: none; }
-section ul.left-nav a.active { color: #9ebc42; }
+section ul.left-nav a.active { color: $color; }
 section ul.left-nav a li {}
 section ul.left-nav .toggle { display: none; }
 
@@ -209,7 +214,7 @@ section .panel h1 { font-size: 48px; padding: 0 0 12px; margin: 0; color: #49494
 section .panel h3 { border-bottom: 4px solid #f1f1f1; padding: 12px; background-color: #f1f1f1; font-weight: normal; }
 section .panel h4 { padding: 0; margin: 0; }
 section .panel ul { font-family: 'roboto-condensedregular'; color: #494949; margin-bottom: 12px; }
-section .panel ul a.more { display: inline-block; margin: 0px 0 8px -40px; cursor:pointer; color: #9ebc42; font-family: 'roboto-condensedregular'; font-size: 16px; font-weight: normal; }
+section .panel ul a.more { display: inline-block; margin: 0px 0 8px -40px; cursor:pointer; color: $color; font-family: 'roboto-condensedregular'; font-size: 16px; font-weight: normal; }
 section .panel ul a.more:hover { color: #666; }
 section .panel .row .row { border-bottom: 1px solid #ededed; padding: 12px 0 0; margin: 0 0px; }
 section .panel { box-shadow: none; }
@@ -220,7 +225,7 @@ section .panel-title>a.collapsed:after { content: '+'; }
 section .panel {
     .special {
         h3 {
-            background-color: #9EBC42; color: #fff;
+            background-color: $color; color: #fff;
 
             &:after { content: '' !important; }
         }
@@ -241,7 +246,7 @@ section .tiles.no-margin a img { width: 100%; }
 section .tiles strong { font-family: 'roboto-condensedbold'; font-size: 21px; }
 section .tiles a { display: inline-block; width: 33.3333%; margin: 0 -2px 1px; }
 section .tiles a img { display: inline-block; padding-bottom: 0px; }
-section .tiles a:hover { /*background-color: #9ebc42;*/ }
+section .tiles a:hover { /*background-color: $color;*/ }
 section .tiles a:hover img { opacity: 0.75; }
 
 section .compact-left { display: block; max-width: 640px; margin: 64px auto 0;  }
@@ -251,9 +256,9 @@ section .compact-left p { text-align: left; }
 section form { margin: 64px auto; max-width: 640px; }
 section form .form-control { background-color: #e5e5e5; border: none; border-radius: 0; box-shadow: none; margin-bottom: 16px; height: 64px; line-height: 64px; }
 section form textarea.form-control { line-height: initial; height: 128px; padding-top: 24px; }
-section form button.button { float: right; background-color: #9ebc42; color: #fff; border: none; border-bottom: 4px solid #83a90d; font-family: 'roboto-condensedregular'; }
+section form button.button { float: right; background-color: $color; color: #fff; border: none; border-bottom: 4px solid $color; font-family: 'roboto-condensedregular'; }
 section .divider { border-bottom: 1px solid #dddddd; margin: 5% 0; }
-section .green { color: #83A90D; }
+section .green { color: $color; }
 
 section.gray { background-color: #e8e8e8; }
 section.light-gray { background-color: #f6f7f8; }
@@ -268,7 +273,7 @@ section .visitor-carousel .arrow.left { float: left; margin-top: -32px; left: -3
 section .visitor-carousel .arrow.right { float: right; margin-top: -32px; right: -32px; }
 section .visitor-carousel h3 { margin: 0; padding: 0 0 8px; font-size: 24px; line-height: 24px;}
 section .visitor-carousel .left-justify { text-align: left; }
-section .visitor-carousel .button { padding: 21px 64px; background-color: #9ebd3d; color: #fff; position: absolute; bottom: 0; margin-bottom: -5%; left: 33.3334%; width: 33.3334%; pointer-events:auto; }
+section .visitor-carousel .button { padding: 21px 64px; background-color: $color; color: #fff; position: absolute; bottom: 0; margin-bottom: -5%; left: 33.3334%; width: 33.3334%; pointer-events:auto; }
 section .visitor-carousel .navi { position: absolute; top: 0; bottom: 0; left: 0; right: 0; pointer-events:none;  }
 
 section {
@@ -279,7 +284,7 @@ section {
 
             div {
                 background-color: #e6e6e6;
-                border-top: 4px solid #9ebc42;
+                border-top: 4px solid $color;
                 margin: 0 0 0 15px;
                 padding: 10% 0;
                 text-align: center;
@@ -331,7 +336,7 @@ section {
 .about-carousel.gray { background-color: #e8e8e8; }
 .about-carousel h2 { color: #494949; font-family: 'roboto-condensedregular'; font-size: 32px; padding: 5% 0; margin: 0; }
 .about-carousel .owl-carousel .item, .panelshop-carousel .owl-carousel .item { padding: 0 7.5%; }
-.about-carousel .owl-carousel .item a { background-color: #9ebc42; display: inline-block;  }
+.about-carousel .owl-carousel .item a { background-color: $color; display: inline-block;  }
 .about-carousel .owl-carousel .item img { max-width: 100%; display: block; padding-bottom: initial; }
 .about-carousel .owl-carousel .item img:hover { opacity: .5; }
 .about-carousel .owl-carousel .item strong { margin: 4px 0; display: block; font-size: 21px; color: #4a4a4a; font-family: 'roboto-condensedbold'; }
@@ -352,18 +357,36 @@ section {
 .about-logos .owl-carousel .item  { text-align: center; }
 
 /*footer styles*/
-footer { background-color: #dbdbdb; padding: 72px 12px; }
-footer .item { text-align: left; }
-footer .social-media { display: block; margin-bottom: 8px; }
-footer ul { list-style: none; padding: 0; margin: 0; }
-footer ul a { display: block; color: #333333; padding: 0 0 20px; text-transform: uppercase; font-family: "roboto-condensedlight"; word-wrap: break-word; }
-footer ul a:hover { color: #84a229; }
-footer ul a li strong { font-family: "roboto-condensedbold"; }
-footer .divider1 { display: inline-block; height: 128px; width: 0px; margin: 0 26px 0 -30px; border-right: 1px solid #333; }
-footer img { vertical-align: top; }
-footer .center { text-align: center; }
-footer p { font-family: "roboto-condensedlight"; font-size: 14px; color: #999999; }
-footer .pad-top { padding-top: 5%; }
+footer { 
+    background-color: #dbdbdb; 
+    padding: 72px 12px; 
+
+    .item { text-align: left; }
+    .social-media { display: block; margin-bottom: 8px; }
+    ul {
+        list-style: none; padding: 0; margin: 0;
+
+        a { 
+            display: block; 
+            color: #333333; 
+            padding: 0 0 20px; 
+            text-transform: uppercase; 
+            font-family: "roboto-condensedlight"; 
+            word-wrap: break-word; 
+
+            &:hover { color: $color; }
+
+            li {
+                strong { font-family: "roboto-condensedbold"; }
+            }
+        }
+    }
+    img { vertical-align: top; max-width: 100%; padding: 0 10% 10%; }
+    p { font-family: "roboto-condensedlight"; font-size: 14px; color: #999999; }
+
+    .center { text-align: center; }
+    .pad-top { padding-top: 5%; }
+}
 
 /*class mutators*/
 .effect-swing { -webkit-transition: all 0.25s ease-out; -moz-transition: all 0.25s ease-out; -o-transition: all 0.25s ease-out; transition: all 0.25s ease-out; }
