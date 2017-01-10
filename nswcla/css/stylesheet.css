@@ -99,7 +99,8 @@ nav {
   nav .nav-button {
     display: none; }
   nav.white {
-    background-color: #fff; }
+    background-color: #fff;
+    text-align: initial; }
     nav.white .logo-link {
       display: initial; }
     nav.white .logo {
@@ -110,17 +111,19 @@ nav {
         display: initial;
         padding: 18px 0;
         background-color: transparent; }
-    nav.white ul a {
-      color: #494949; }
-      nav.white ul a:hover {
-        color: #6fcde4; }
-      nav.white ul a li {
-        border-right-color: #494949; }
-    nav.white ul > li > ul > li > a {
-      background-color: #fff;
-      text-align: left; }
-      nav.white ul > li > ul > li > a:hover {
-        background-color: #ededed; }
+    nav.white ul {
+      float: right; }
+      nav.white ul a {
+        color: #494949; }
+        nav.white ul a:hover {
+          color: #6fcde4; }
+        nav.white ul a li {
+          border-right-color: #494949; }
+      nav.white ul > li > ul > li > a {
+        background-color: #fff;
+        text-align: left; }
+        nav.white ul > li > ul > li > a:hover {
+          background-color: #ededed; }
 
 /*header styles*/
 .header1 {

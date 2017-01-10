@@ -107,6 +107,7 @@ nav {
 
     &.white {
         background-color: #fff;
+        text-align: initial;
 
         .logo-link { display: initial; }
         .logo {
@@ -120,6 +121,8 @@ nav {
             }
         }
         ul {
+            float: right;
+
             a {
                 color: #494949;
 
