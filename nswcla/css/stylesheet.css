@@ -748,8 +748,8 @@ article {
   article .title {
     display: inline-block;
     background-color: #29b4cd;
-    margin: 0 -10% 5%;
-    padding: 12px 5% 0px; }
+    margin: 0 -10%;
+    padding: 6px 2.5% 6px 10%; }
     article .title h3 {
       color: #ffffff;
       font-size: 18px;
