@@ -739,6 +739,7 @@ section .vertical-align > [class*=" col-"] > div {
 
 article {
   background-color: #ffffff;
+  border: 1px solid #cccccc;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
   margin: 0 0 5%;
   padding: 24px; }
@@ -1126,6 +1127,9 @@ img.zoom-out:hover {
     width: 100%; }
     section .training-schedule-options .item div {
       margin: 0; }
+  article .title {
+    display: block;
+    margin: -24px -24px 24px -24px; }
   footer .item {
     text-align: center; }
   footer .divider1 {

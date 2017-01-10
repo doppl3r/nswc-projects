@@ -337,6 +337,7 @@ section {
 
 article {
     background-color: #ffffff;
+    border: 1px solid #cccccc;
     box-shadow: 0 3px 5px rgba(0,0,0,0.15);
     margin: 0 0 5%;
     padding: 24px;
@@ -517,6 +518,13 @@ img.zoom-out:hover { -webkit-transform:scale(0.75); -moz-transform:scale(0.75); 
             }
         }
     }
+
+    article {
+        .title {
+            display: block;
+            margin: -24px -24px 24px -24px;
+        }
+    }
     
     footer .item { text-align: center; }
     footer .divider1 { display: none; }
@@ -524,6 +532,7 @@ img.zoom-out:hover { -webkit-transform:scale(0.75); -moz-transform:scale(0.75); 
 @media(max-height: 639px) and (orientation: landscape){
     /*prevent nav from covering content*/
     nav.white { position: relative; }
+
     .header1 .vide .wrapper-vertical { /*padding: 0px 32px;*/ }
     .header1 .vide h1 { font-size: 32px; line-height: 32px; }
     .header2 { margin: 0; }
