@@ -40,6 +40,7 @@ nav {
         padding: 0;
         margin: 0;
         vertical-align: top;
+        text-align: left;
         // float: right;
         pointer-events: auto;
 
@@ -116,7 +117,9 @@ nav {
             .large { display: none; }
             .small {
                 display: initial;
-                padding: 18px 0;
+                padding: 24px 0 24px 15px;
+                height: 92px;
+                width: auto;
                 background-color: transparent;
             }
         }
