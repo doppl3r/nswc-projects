@@ -410,6 +410,9 @@ section .button.no-margin {
 section .center {
   text-align: center; }
 
+section .right-align {
+  text-align: right; }
+
 section .no-margin {
   margin: initial; }
 
@@ -1126,6 +1129,8 @@ img.zoom-out:hover {
     padding: 12px;
     left: initial;
     width: auto; }
+  section .right-align {
+    text-align: center; }
   section .training-schedule-options .item {
     width: 100%; }
     section .training-schedule-options .item div {

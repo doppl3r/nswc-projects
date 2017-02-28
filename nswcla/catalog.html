@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>NSWC</title>
+		<meta name="description" content="NSWC hvac">
+		<meta name="author" content="jacob debenedetto">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
+		<link rel='shortcut icon' type='image/x-icon' href='img/favicon.ico' />
+	</head>
+	<body>
+        <nav class="white"></nav>
+        
+        <section style="background: #f3f3f3; margin-top: 92px;">
+            <div class="wrapper pad-side">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h3 style="margin-bottom: 0; padding-bottom: 0;">NSWC Catalog</h3>
+                        <p>Stock book and product guide - 5th Edition</p>
+                    </div>
+                    <div class="col-sm-6 right-align">
+                        <a href="files/catalog.pdf" target="_blank" class="button gray effect-swing">Download Catalog</a>
+                    </div>
+                </div>
+                <embed src="files/catalog.pdf" width="100%" height="640" type='application/pdf'>
+            </div>
+        </section>
+        
+        <footer></footer>
+        
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="js/jquery.vide.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+		<script>
+            $(document).ready(function () {
+                $('nav').load('nav.html',function(){ setNav(2); });
+                $('.panelshop-carousel').load('panelshop-carousel.html');
+                $('.panelshop-carousel2').load('panelshop-carousel2.html');
+                $('.contact-form').load('contact-form2.html');
+                $('footer').load('footer.html');
+            });
+		</script>
+	</body>
+</html>
