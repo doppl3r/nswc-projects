@@ -1,0 +1,17 @@
+# Enable the Rewrite Engine
+RewriteEngine On
+
+# Match a folder name, www.example.com/dev/ in this case
+RewriteBase /dev/
+
+# SEO URL's for html files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Hide the .html extension to prevent double content
+RewriteRule ^(.+).html$ $1 [NC,L,R=301]
+
+# Rewrite to, and present the contents of the .html files, 
+# if there is no file extension in the URL.
+#   For example: /foo shows /foo.html
+RewriteRule ^([^/]+)(?:/(.+))?$ $1.html?(?2p=$2) [L]
