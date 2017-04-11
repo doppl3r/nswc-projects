@@ -17,7 +17,7 @@ function isIE(){ return (navigator.userAgent.indexOf("MSIE") != -1); }
 function isSafari(){ return (navigator.userAgent.indexOf("Safari") > -1); }
 
 //slice off the 'html' extra for the website
-//sliceExtension();
+sliceExtension();
 function sliceExtension(){
     var myURL=window.location.href;
     if (myURL.lastIndexOf(".html") > 0){ //if html is pulled up in nav
